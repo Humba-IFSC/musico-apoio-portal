@@ -156,11 +156,14 @@
   if (searchClose) searchClose.addEventListener('click', () => toggleSearch(false));
   if (searchInput) searchInput.addEventListener('input', (e) => filterContent(e.target.value));
 
-  // Destaca automaticamente a página atual e o menu pai quando em subpágina
-  const currentFile = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  // Destaca automaticamente a página atual e o menu pai (compatível com .html local e Clean URLs da Cloudflare)
+  const normPage = (s) => {
+    const clean = (s || '').split('?')[0].split('#')[0].split('/').pop().toLowerCase().replace(/\.html$/i, '');
+    return clean || 'index';
+  };
+  const currentPage = normPage(window.location.pathname);
   document.querySelectorAll('.nav-link, .dropdown-link').forEach((link) => {
-    const href = (link.getAttribute('href') || '').toLowerCase();
-    const isCurrent = href === currentFile || (currentFile === '' && href === 'index.html');
+    const isCurrent = normPage(link.getAttribute('href')) === currentPage;
     link.classList.toggle('active', isCurrent);
     if (isCurrent) {
       link.setAttribute('aria-current', 'page');
