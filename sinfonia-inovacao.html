@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinfonia & Inovação · Calculadoras | Programa Músico de Apoio — IFSC São José</title>
+  <meta name="description" content="Parceria Sinfonia da Permanência (Fábio Henrique de Carvalho Bartelega) e Calculadoras Client-Side de Tubofones PVC e Domo Geodésico 2V.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- BARRA DE ACESSIBILIDADE GOVERNAMENTAL (eMAG 3.1 / WCAG 2.2 AA / TEA) -->
+  <div class="a11y-bar" role="region" aria-label="Barra de acessibilidade">
+    <div class="container a11y-bar__inner">
+      <ul class="a11y-shortcuts">
+        <li><a href="#conteudo-principal" accesskey="1"><span class="a11y-key">1</span> Ir para o conteúdo</a></li>
+        <li><a href="#menu-principal" accesskey="2"><span class="a11y-key">2</span> Ir para o menu</a></li>
+        <li><a href="index.html" accesskey="3"><span class="a11y-key">3</span> Página inicial</a></li>
+        <li><a href="#search-drawer" id="trigger-search" accesskey="4"><span class="a11y-key">4</span> Filtrar página</a></li>
+      </ul>
+      <div class="a11y-controls" role="group" aria-label="Controles visuais e sensoriais">
+        <button type="button" class="a11y-btn" id="btn-font-dec" title="Diminuir tamanho da fonte" aria-label="Diminuir tamanho da fonte">A−</button>
+        <button type="button" class="a11y-btn" id="btn-font-reset" title="Restaurar tamanho padrão da fonte" aria-label="Restaurar tamanho da fonte">A</button>
+        <button type="button" class="a11y-btn" id="btn-font-inc" title="Aumentar tamanho da fonte" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" class="a11y-btn" id="btn-contrast" accesskey="5" aria-pressed="false" title="Alternar modo de alto contraste (Alt + 5)">
+          <span class="a11y-key">5</span> Alto Contraste
+        </button>
+        <button type="button" class="a11y-btn" id="btn-motion" aria-pressed="false" title="Reduzir animações para conforto sensorial">
+          Conforto Sensorial
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CABEÇALHO INSTITUCIONAL & MENU PRINCIPAL EXPANSÍVEL -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-group" aria-label="IFSC Câmpus São José — Início do Portal Músico de Apoio">
+        <div class="brand-logo-wrap">
+          <img src="assets/img/ifsc-horizontal-cor.png" alt="Instituto Federal de Santa Catarina — IFSC" class="brand-logo logo-light" width="111" height="38">
+          <img src="assets/img/ifsc-horizontal-branco.png" alt="Instituto Federal de Santa Catarina — IFSC" class="brand-logo logo-dark" width="111" height="38">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Músico de Apoio</span>
+          <span class="brand-subtitle">Programa Guarda-Chuva · IFSC São José</span>
+        </div>
+      </a>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="menu-principal">
+        ☰ Menu
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal do portal">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item nav-item--has-sub">
+            <a class="nav-link" href="projeto.html">Projetos</a>
+            <button type="button" class="nav-caret-btn" aria-expanded="false" aria-label="Expandir submenu de Projetos">▾</button>
+            <ul class="dropdown-menu" aria-label="Submenu de Projetos">
+              <li><a class="dropdown-link" href="projeto.html">Músico de Apoio (Base &amp; Editais)<small>Metodologia PHC/PPE, Sala de Música e ciclos PROPPI/DAE</small></a></li>
+              <li><a class="dropdown-link" href="projeto-rac-and-roll.html">Banda RAC &amp; Roll<small>Projeto musical organizado pelo Prof. Jorge Luiz Pereira</small></a></li>
+              <li><a class="dropdown-link" href="projetos-futuros.html">Projetos Futuros · Ciclo 2027<small>Incubadora de novas iniciativas e oficinas em planejamento</small></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="oficinas.html">Oficinas</a></li>
+          <li class="nav-item nav-item--has-sub">
+            <a class="nav-link" href="eventos.html">Eventos</a>
+            <button type="button" class="nav-caret-btn" aria-expanded="false" aria-label="Expandir submenu de Eventos">▾</button>
+            <ul class="dropdown-menu" aria-label="Submenu de Eventos">
+              <li><a class="dropdown-link" href="eventos.html">Portfólio 2026 (Realizados)<small>SNCT/MCC, Aulão de Vestibular Live e Feira de Jogos</small></a></li>
+              <li><a class="dropdown-link" href="eventos-2027.html">Agenda &amp; Eventos 2027<small>Calendário anual de apresentações e participações previstas</small></a></li>
+            </ul>
+          </li>
+          <li class="nav-item nav-item--has-sub">
+            <a class="nav-link" href="tecnologia-social.html">Tecnologia Social</a>
+            <button type="button" class="nav-caret-btn" aria-expanded="false" aria-label="Expandir submenu de Tecnologia Social">▾</button>
+            <ul class="dropdown-menu" aria-label="Submenu de Tecnologia Social">
+              <li><a class="dropdown-link" href="tecnologia-social.html">Manual &amp; Replicabilidade<small>Guia de implantação na Rede Federal e ciência aberta</small></a></li>
+              <li><a class="dropdown-link" href="apostilas.html">Apostilas &amp; Materiais Didáticos<small>Bateria, Violão (dedos-pivô) e futuras tecnologias compartilhadas</small></a></li>
+            </ul>
+          </li>
+          <li class="nav-item nav-item--has-sub">
+            <a class="nav-link active" href="sinfonia-inovacao.html" aria-current="page">Sinfonia &amp; Inovação</a>
+            <button type="button" class="nav-caret-btn" aria-expanded="false" aria-label="Expandir submenu de Sinfonia &amp; Inovação">▾</button>
+            <ul class="dropdown-menu" aria-label="Submenu de Sinfonia &amp; Inovação">
+              <li><a class="dropdown-link active" href="sinfonia-inovacao.html" aria-current="page">Calculadoras Científicas (PVC &amp; Domo 2V)<small>Eco-Lutheria e Geometria Geodésica 100% no navegador</small></a></li>
+              <li><a class="dropdown-link" href="sinfonia-bncc.html">Matriz BNCC &amp; 7 Encontros<small>5 Unidades Curriculares, 11 habilidades e trilha didática</small></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe e Ética</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="search-drawer" id="search-drawer" hidden>
+      <div class="container search-drawer__inner">
+        <label for="site-search-input" class="sr-only">Filtrar conteúdos nesta página</label>
+        <input type="search" id="site-search-input" class="search-input" placeholder="Filtrar conteúdos desta página (ex.: RAC &amp; Roll, BNCC, Domo, Tubofone, SNCT, ODS)...">
+        <span class="search-results-count" id="search-results-count" aria-live="polite">Digite para filtrar</span>
+        <button type="button" class="btn btn-secondary btn-sm" id="search-close">Fechar</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Caminho de navegação">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Início</a></li> <li aria-hidden="true">/</li> <li><a href="sinfonia-inovacao.html">Sinfonia &amp; Inovação</a></li> <li aria-hidden="true">/</li> <li aria-current="page">Calculadoras Científicas</li>
+          </ol>
+        </nav>
+        <h1>Sinfonia &amp; Inovação — Calculadoras Científicas</h1>
+        <p>Parceria com o projeto Sinfonia da Permanência (autoria do especialista em Educação Ambiental Fábio Henrique de Carvalho Bartelega): ferramentas 100% client-side para Eco-Lutheria e Domo Geodésico 2V.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="sensory-notice" role="note">
+          <div>
+            <strong>100% Client-Side &amp; Conforto Sensorial:</strong> funciona offline no navegador; os tons de conferência só tocam após o seu clique.
+            <span id="audio-live-status" class="sr-only" aria-live="polite">Áudio silenciado.</span>
+          </div>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <a href="sinfonia-bncc.html" class="btn btn-secondary btn-sm">Ver Matriz BNCC &amp; 7 Encontros →</a>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-mute-all">🔇 Silenciar Som</button>
+          </div>
+        </div>
+
+        <div class="calc-tabs" role="tablist" aria-label="Módulos das calculadoras científicas">
+          <button type="button" class="calc-tab-btn" role="tab" id="tab-btn-pvc" aria-selected="true" aria-controls="panel-pvc">
+            Módulo A · Tubofones de PVC (Física Acústica)
+          </button>
+          <button type="button" class="calc-tab-btn" role="tab" id="tab-btn-dome" aria-selected="false" aria-controls="panel-dome">
+            Módulo B · Domo Geodésico 2V (Geometria &amp; Ecologia)
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm" id="btn-print-plan" style="margin-left:auto;">
+            🖨 Imprimir / Salvar Plano de Corte
+          </button>
+        </div>
+
+        <!-- MÓDULO A -->
+        <div class="calc-panel" id="panel-pvc" role="tabpanel" aria-labelledby="tab-btn-pvc">
+          <div class="card" data-searchable>
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.75rem;">
+              <div>
+                <span class="pill">BNCC: EM13CNT301 · Ondulatória Aplicada</span>
+                <h2 style="margin:0.35rem 0 0;font-size:1.25rem;">Dimensionamento de Tubos Abertos com Correção de Helmholtz</h2>
+              </div>
+              <code class="mono" style="background:var(--bg-dark);color:#5CE671;padding:0.45rem 0.8rem;border-radius:var(--radius-sm);font-size:0.84rem;">L = v / (2·f) − 1,22·r</code>
+            </div>
+
+            <div class="calc-controls">
+              <div class="field">
+                <label for="pvc-temp">Temperatura da Oficina (°C)</label>
+                <input type="number" id="pvc-temp" value="20" min="5" max="40" step="1">
+                <span class="field-hint" id="pvc-speed-out">v = 343,40 m/s (20 °C)</span>
+              </div>
+              <div class="field">
+                <label for="pvc-diameter">Bitola do Tubo PVC (Diâmetro Interno)</label>
+                <select id="pvc-diameter">
+                  <option value="21.6">PVC 25 mm (Ø interno 21,6 mm)</option>
+                  <option value="27.8">PVC 32 mm (Ø interno 27,8 mm)</option>
+                  <option value="36.0">PVC 40 mm — Esgoto (Ø interno 36,0 mm)</option>
+                  <option value="46.4" selected>PVC 50 mm — Esgoto (Ø interno 46,4 mm · Padrão)</option>
+                  <option value="71.2">PVC 75 mm — Esgoto (Ø interno 71,2 mm · Graves)</option>
+                  <option value="96.4">PVC 100 mm — Esgoto (Ø interno 96,4 mm · Subgraves)</option>
+                </select>
+                <span class="field-hint" id="pvc-corr-out">Correção 1,22·r = 2,83 cm</span>
+              </div>
+              <div class="field">
+                <label for="pvc-octave">Oitava Musical</label>
+                <select id="pvc-octave">
+                  <option value="3">Oitava 3 (C3–C4 · Grave)</option>
+                  <option value="4" selected>Oitava 4 (C4–C5 · Médio Escolar)</option>
+                  <option value="5">Oitava 5 (C5–C6 · Agudo)</option>
+                </select>
+                <label style="display:flex;align-items:center;gap:0.4rem;margin-top:0.45rem;font-weight:600;font-size:0.78rem;cursor:pointer;">
+                  <input type="checkbox" id="pvc-only-natural" style="width:auto;"> Mostrar apenas notas naturais (escala diatônica)
+                </label>
+              </div>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;padding:0.75rem 1rem;background:var(--ifsc-verde-suave);border-radius:var(--radius-sm);border:1px solid rgba(50,160,65,0.3);">
+              <label for="pvc-custom-freq" style="font-size:0.84rem;font-weight:700;">Frequência livre (Hz):</label>
+              <input type="number" id="pvc-custom-freq" value="440" min="50" max="2000" step="0.5" style="width:110px;padding:0.38rem 0.6rem;border-radius:5px;border:1.5px solid var(--border-strong);font-family:var(--font-mono);font-weight:700;">
+              <strong id="pvc-custom-out" class="mono" style="font-size:0.86rem;color:var(--ifsc-verde-escuro);"></strong>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <caption class="sr-only">Tabela de comprimento de corte para tubofones de PVC conforme temperatura e bitola</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Nota / Cifra</th><th scope="col">Classificação</th><th scope="col">Frequência (f)</th>
+                    <th scope="col">Teórico (v/2f)</th><th scope="col">Corte Exato (L)</th><th scope="col">Proporção</th><th scope="col">Áudio (Clique)</th>
+                  </tr>
+                </thead>
+                <tbody id="pvc-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- MÓDULO B -->
+        <div class="calc-panel" id="panel-dome" role="tabpanel" aria-labelledby="tab-btn-dome" hidden>
+          <div class="card" data-searchable>
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.75rem;">
+              <div>
+                <span class="pill pill--blue">BNCC: EM13MAT308 · EM13CNT105</span>
+                <h2 style="margin:0.35rem 0 0;font-size:1.25rem;">Dimensionamento do Domo Geodésico 2V &amp; Escala de Permanência</h2>
+              </div>
+              <code class="mono" style="background:var(--bg-dark);color:#93C5FD;padding:0.45rem 0.8rem;border-radius:var(--radius-sm);font-size:0.84rem;">Euler: V − A + F = 26 − 65 + 40 = 1</code>
+            </div>
+
+            <div class="grid-2" style="align-items:start;">
+              <div>
+                <div class="calc-controls" style="grid-template-columns:1fr;margin-bottom:1rem;">
+                  <div class="field">
+                    <label for="dome-radius">Raio do Domo Geodésico 2V — R (em metros)</label>
+                    <input type="number" id="dome-radius" value="2.00" min="0.50" max="8.00" step="0.10">
+                    <div class="setlist-tags" style="margin-top:0.6rem;">
+                      <button type="button" class="btn btn-secondary btn-sm" data-dome-preset="1.00">Maquete (1,0 m)</button>
+                      <button type="button" class="btn btn-primary btn-sm" data-dome-preset="2.00">Padrão IFSC (2,0 m)</button>
+                      <button type="button" class="btn btn-secondary btn-sm" data-dome-preset="3.00">Pátio (3,0 m)</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-wrap">
+                  <table>
+                    <caption class="sr-only">Lista de usinagem das 65 barras e parâmetros geométricos do Domo 2V</caption>
+                    <thead><tr><th scope="col">Parâmetro / Peça</th><th scope="col">Fator / Quantidade</th><th scope="col">Medida Calculada</th></tr></thead>
+                    <tbody>
+                      <tr><td><strong>Barras Tipo A</strong></td><td class="mono">0,6180·R · 35 un.</td><td class="cut-highlight" id="dome-out-la">1,236 m</td></tr>
+                      <tr><td><strong>Barras Tipo B</strong></td><td class="mono">0,5465·R · 30 un.</td><td class="cut-highlight" id="dome-out-lb">1,093 m</td></tr>
+                      <tr><td>Metragem Linear (Tipo A)</td><td>35 barras</td><td class="mono" id="dome-out-tot-a">43,26 m</td></tr>
+                      <tr><td>Metragem Linear (Tipo B)</td><td>30 barras</td><td class="mono" id="dome-out-tot-b">32,79 m</td></tr>
+                      <tr><td><strong>Total de Material Linear</strong></td><td><strong>65 barras · 26 nós</strong></td><td class="cut-highlight" id="dome-out-linear">76,05 m</td></tr>
+                      <tr><td>Diâmetro / Altura (2R / R)</td><td>Hemisfério 2V</td><td class="mono"><span id="dome-out-diam">4,00 m</span> / <span id="dome-out-height">2,00 m</span></td></tr>
+                      <tr><td>Área Circular de Piso</td><td class="mono">π·R²</td><td class="mono" id="dome-out-area">12,57 m²</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:1rem;">
+                <div style="background:var(--bg-dark);border-radius:var(--radius-md);padding:1rem;color:#FFFFFF;">
+                  <svg viewBox="0 0 360 170" role="img" aria-label="Corte vertical do Domo 2V com os 3 estratos de permanência ecológica" width="100%">
+                    <path d="M 40 145 A 140 120 0 0 1 320 145 Z" fill="rgba(50,160,65,0.14)" stroke="#5CE671" stroke-width="2"/>
+                    <line x1="30" y1="25" x2="330" y2="25" stroke="#FCA5A5" stroke-dasharray="4 3"/>
+                    <line x1="30" y1="85" x2="330" y2="85" stroke="#FDE68A" stroke-dasharray="4 3"/>
+                    <line x1="30" y1="138" x2="330" y2="138" stroke="#86EFAC" stroke-dasharray="4 3"/>
+                    <text x="180" y="20" text-anchor="middle" fill="#FCA5A5" font-size="10" font-family="Open Sans, sans-serif" font-weight="700" id="svg-cota-3">Ápice: 2,00 m (400–4.000 anos)</text>
+                    <text x="180" y="80" text-anchor="middle" fill="#FDE68A" font-size="10" font-family="Open Sans, sans-serif" font-weight="700" id="svg-cota-2">Médio: 1,00 m (50–500 anos)</text>
+                    <text x="180" y="133" text-anchor="middle" fill="#86EFAC" font-size="10" font-family="Open Sans, sans-serif" font-weight="700" id="svg-cota-1">Base: 0,10 m (Semanas–Meses)</text>
+                    <text x="180" y="162" text-anchor="middle" fill="#CBD5E1" font-size="10" font-family="JetBrains Mono, monospace" id="svg-dome-r">R = 2,00 m · Diâmetro = 4,00 m</text>
+                  </svg>
+                </div>
+
+                <div class="strata-list">
+                  <div class="stratum-card stratum--high"><div class="stratum-head"><span>▲ Estrato 3 · Alta Persistência (400–4.000 anos)</span><span class="mono" id="stratum-cota-3">2,00 m</span></div><p style="font-size:0.82rem;">Tubofones de PVC, idiófonos de garrafas PET e vidro (ligações C–C e SiO₂).</p></div>
+                  <div class="stratum-card stratum--mid"><div class="stratum-head"><span>◆ Estrato 2 · Persistência Intermediária (50–500 anos)</span><span class="mono" id="stratum-cota-2">1,00 m</span></div><p style="font-size:0.82rem;">Membranofones de latas de aço e alumínio passivado (Al₂O₃).</p></div>
+                  <div class="stratum-card stratum--low"><div class="stratum-head"><span>● Estrato 1 · Degradação Rápida (Semanas a Meses)</span><span class="mono" id="stratum-cota-1">0,10 m</span></div><p style="font-size:0.82rem;">Chocalhos e ressonadores de papelão, celulose e sementes naturais.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <nav class="page-pager" aria-label="Navegação entre páginas">
+        <a href="apostilas.html" class="pager-link"><span class="pager-dir">← Página anterior</span><span class="pager-title">Apostilas &amp; Materiais</span></a>
+        <a href="sinfonia-bncc.html" class="pager-link pager-link--next"><span class="pager-dir">Próxima página →</span><span class="pager-title">Matriz BNCC &amp; 7 Encontros</span></a>
+      </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ INSTITUCIONAL -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/img/ifsc-horizontal-branco.png" alt="Instituto Federal de Santa Catarina — IFSC" class="footer-logo" width="128" height="44">
+          <p style="font-size:0.86rem;color:var(--text-on-dark-muted);margin:0;max-width:44ch;">
+            <strong>Programa Músico de Apoio &amp; Sinfonia da Permanência</strong><br>
+            Instituto Federal de Santa Catarina — Câmpus São José.<br>
+            Pesquisa Aplicada, Cultura e Tecnologia Social (Editais nº 12/2025 e nº 16/2026/PROPPI/DAE).
+          </p>
+        </div>
+
+        <div>
+          <h3>Páginas &amp; Submenus</h3>
+          <ul class="footer-links">
+            <li><a href="projeto.html">Projetos (Músico de Apoio · RAC &amp; Roll · 2027)</a></li>
+            <li><a href="oficinas.html">Oficinas &amp; Estúdio Digital</a></li>
+            <li><a href="eventos.html">Eventos (Portfólio 2026 · Agenda 2027)</a></li>
+            <li><a href="tecnologia-social.html">Tecnologia Social &amp; Apostilas</a></li>
+            <li><a href="sinfonia-inovacao.html">Sinfonia &amp; Inovação (Calculadoras · BNCC)</a></li>
+            <li><a href="equipe.html">Equipe e Ética</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Acervos e Links Institucionais</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.ifsc.edu.br/web/campus-sao-jose" target="_blank" rel="noopener noreferrer">Portal IFSC Câmpus São José ↗</a></li>
+            <li><a href="https://drive.google.com/drive/folders/19b-qqgw5ElqcGSa6ewLfSHoE83AjjyEx?usp=sharing" target="_blank" rel="noopener noreferrer">Acervo SNCT / MCC 2026 ↗</a></li>
+            <li><a href="https://www.youtube.com/live/t1BAm_mXt-0" target="_blank" rel="noopener noreferrer">Aulão de Vestibular (YouTube Live) ↗</a></li>
+            <li><a href="https://drive.google.com/drive/folders/1a1DQWz-fpDmJqDzLh6jj91_zjrW52owD?usp=drive_link" target="_blank" rel="noopener noreferrer">Gravações Feira de Jogos 2026.2 ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span><strong>Desenvolvido por Prof. Humberto Luz Oliveira</strong> · IFSC Câmpus São José · Tecnologia Social Aberta (GitHub + Cloudflare Pages)</span>
+        <span>Em conformidade com eMAG 3.1, WCAG 2.2 AA, LGPD e Manual da Marca IFSC</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- VLibras Widget Oficial do Governo Federal -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>if (window.VLibras) { new window.VLibras.Widget('https://vlibras.gov.br/app'); }</script>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/calculadoras.js"></script>
+</body>
+</html>

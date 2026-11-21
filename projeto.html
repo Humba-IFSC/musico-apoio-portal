@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos · Músico de Apoio | Programa Músico de Apoio — IFSC São José</title>
+  <meta name="description" content="Programa guarda-chuva Músico de Apoio, metodologia PHC/PPE, Sala de Música e editais PROPPI/DAE.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- BARRA DE ACESSIBILIDADE GOVERNAMENTAL (eMAG 3.1 / WCAG 2.2 AA / TEA) -->
+  <div class="a11y-bar" role="region" aria-label="Barra de acessibilidade">
+    <div class="container a11y-bar__inner">
+      <ul class="a11y-shortcuts">
+        <li><a href="#conteudo-principal" accesskey="1"><span class="a11y-key">1</span> Ir para o conteúdo</a></li>
+        <li><a href="#menu-principal" accesskey="2"><span class="a11y-key">2</span> Ir para o menu</a></li>
+        <li><a href="index.html" accesskey="3"><span class="a11y-key">3</span> Página inicial</a></li>
+        <li><a href="#search-drawer" id="trigger-search" accesskey="4"><span class="a11y-key">4</span> Filtrar página</a></li>
+      </ul>
+      <div class="a11y-controls" role="group" aria-label="Controles visuais e sensoriais">
+        <button type="button" class="a11y-btn" id="btn-font-dec" title="Diminuir tamanho da fonte" aria-label="Diminuir tamanho da fonte">A−</button>
+        <button type="button" class="a11y-btn" id="btn-font-reset" title="Restaurar tamanho padrão da fonte" aria-label="Restaurar tamanho da fonte">A</button>
+        <button type="button" class="a11y-btn" id="btn-font-inc" title="Aumentar tamanho da fonte" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" class="a11y-btn" id="btn-contrast" accesskey="5" aria-pressed="false" title="Alternar modo de alto contraste (Alt + 5)">
+          <span class="a11y-key">5</span> Alto Contraste
+        </button>
+        <button type="button" class="a11y-btn" id="btn-motion" aria-pressed="false" title="Reduzir animações para conforto sensorial">
+          Conforto Sensorial
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CABEÇALHO INSTITUCIONAL & MENU PRINCIPAL EXPANSÍVEL -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-group" aria-label="IFSC Câmpus São José — Início do Portal Músico de Apoio">
+        <div class="brand-logo-wrap">
+          <img src="assets/img/ifsc-horizontal-cor.png" alt="Instituto Federal de Santa Catarina — IFSC" class="brand-logo logo-light" width="111" height="38">
+          <img src="assets/img/ifsc-horizontal-branco.png" alt="Instituto Federal de Santa Catarina — IFSC" class="brand-logo logo-dark" width="111" height="38">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Músico de Apoio</span>
+          <span class="brand-subtitle">Programa Guarda-Chuva · IFSC São José</span>
+        </div>
+      </a>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="menu-principal">
+        ☰ Menu
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal do portal">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item nav-item--has-sub">
+            <a class="nav-link active" href="projeto.html" aria-current="page">Projetos</a>
+            <button type="button" class="nav-caret-btn" aria-expanded="false" aria-label="Expandir submenu de Projetos">▾</button>
+            <ul class="dropdown-menu" aria-label="Submenu de Projetos">
+              <li><a class="dropdown-link active" href="projeto.html" aria-current="page">Músico de Apoio (Base &amp; Editais)<small>Metodologia PHC/PPE, Sala de Música e ciclos PROPPI/DAE</small></a></li>
+              <li><a class="dropdown-link" href="projeto-rac-and-roll.html">Banda RAC &amp; Roll<small>Projeto musical organizado pelo Prof. Jorge Luiz Pereira</small></a></li>
+              <li><a class="dropdown-link" href="projetos-futuros.html">Projetos Futuros · Ciclo 2027<small>Incubadora de novas iniciativas e oficinas em planejamento</small></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="oficinas.html">Oficinas</a></li>
+          <li class="nav-item nav-item--has-sub">
+            <a class="nav-link" href="eventos.html">Eventos</a>
+            <button type="button" class="nav-caret-btn" aria-expanded="false" aria-label="Expandir submenu de Eventos">▾</button>
+            <ul class="dropdown-menu" aria-label="Submenu de Eventos">
+              <li><a class="dropdown-link" href="eventos.html">Portfólio 2026 (Realizados)<small>SNCT/MCC, Aulão de Vestibular Live e Feira de Jogos</small></a></li>
+              <li><a class="dropdown-link" href="eventos-2027.html">Agenda &amp; Eventos 2027<small>Calendário anual de apresentações e participações previstas</small></a></li>
+            </ul>
+          </li>
+          <li class="nav-item nav-item--has-sub">
+            <a class="nav-link" href="tecnologia-social.html">Tecnologia Social</a>
+            <button type="button" class="nav-caret-btn" aria-expanded="false" aria-label="Expandir submenu de Tecnologia Social">▾</button>
+            <ul class="dropdown-menu" aria-label="Submenu de Tecnologia Social">
+              <li><a class="dropdown-link" href="tecnologia-social.html">Manual &amp; Replicabilidade<small>Guia de implantação na Rede Federal e ciência aberta</small></a></li>
+              <li><a class="dropdown-link" href="apostilas.html">Apostilas &amp; Materiais Didáticos<small>Bateria, Violão (dedos-pivô) e futuras tecnologias compartilhadas</small></a></li>
+            </ul>
+          </li>
+          <li class="nav-item nav-item--has-sub">
+            <a class="nav-link" href="sinfonia-inovacao.html">Sinfonia &amp; Inovação</a>
+            <button type="button" class="nav-caret-btn" aria-expanded="false" aria-label="Expandir submenu de Sinfonia &amp; Inovação">▾</button>
+            <ul class="dropdown-menu" aria-label="Submenu de Sinfonia &amp; Inovação">
+              <li><a class="dropdown-link" href="sinfonia-inovacao.html">Calculadoras Científicas (PVC &amp; Domo 2V)<small>Eco-Lutheria e Geometria Geodésica 100% no navegador</small></a></li>
+              <li><a class="dropdown-link" href="sinfonia-bncc.html">Matriz BNCC &amp; 7 Encontros<small>5 Unidades Curriculares, 11 habilidades e trilha didática</small></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe e Ética</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="search-drawer" id="search-drawer" hidden>
+      <div class="container search-drawer__inner">
+        <label for="site-search-input" class="sr-only">Filtrar conteúdos nesta página</label>
+        <input type="search" id="site-search-input" class="search-input" placeholder="Filtrar conteúdos desta página (ex.: RAC &amp; Roll, BNCC, Domo, Tubofone, SNCT, ODS)...">
+        <span class="search-results-count" id="search-results-count" aria-live="polite">Digite para filtrar</span>
+        <button type="button" class="btn btn-secondary btn-sm" id="search-close">Fechar</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Caminho de navegação">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Início</a></li> <li aria-hidden="true">/</li> <li><a href="projeto.html">Projetos</a></li> <li aria-hidden="true">/</li> <li aria-current="page">Músico de Apoio</li>
+          </ol>
+        </nav>
+        <h1>Projetos · Programa Guarda-Chuva Músico de Apoio</h1>
+        <p>O Músico de Apoio atua como um ecossistema guarda-chuva no IFSC Câmpus São José, reunindo pesquisa aplicada, bandas estudantis, formação por pares e novas iniciativas musicais.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <!-- Subprojetos abrigados sob o guarda-chuva -->
+        <header class="section-header">
+          <span class="section-tag">Subprojetos Integrados</span>
+          <h2>Iniciativas Abrigadas pelo Programa</h2>
+        </header>
+        <div class="grid-3" style="margin-bottom:2.75rem;">
+          <div class="card card--accent-green" data-searchable>
+            <span class="pill">Núcleo Principal · Editais 12/2025 e 16/2026</span>
+            <h3>Músico de Apoio (Pesquisa &amp; Tutoria)</h3>
+            <p>Validação da tutoria musical por pares (PHC/PPE), Sala de Música acústica e integração interdisciplinar com a <em>Sinfonia da Permanência</em>.</p>
+            <span style="font-size:0.82rem;font-weight:700;color:var(--ifsc-verde-escuro);">Você está nesta página ↓</span>
+          </div>
+          <a href="projeto-rac-and-roll.html" class="hub-card card--accent-red" data-searchable>
+            <span class="pill pill--red">Prática de Conjunto · Cultura</span>
+            <h3>Banda RAC &amp; Roll</h3>
+            <p>Projeto musical de integração estudantil e prática de banda organizado pelo Prof. Jorge Luiz Pereira no Câmpus São José.</p>
+            <span class="hub-card__cta">Abrir página RAC &amp; Roll →</span>
+          </a>
+          <a href="projetos-futuros.html" class="hub-card card--accent-blue" data-searchable>
+            <span class="pill pill--blue">Incubadora · Ciclo 2027</span>
+            <h3>Projetos Futuros &amp; Novas Frentes</h3>
+            <p>Espaço aberto para novas oficinas temáticas, espetáculos coletivos e propostas em incubação para o ano letivo de 2027.</p>
+            <span class="hub-card__cta">Ver Projetos Futuros →</span>
+          </a>
+        </div>
+
+        <!-- Evolução 2026 -> 2027 -->
+        <div class="grid-2" style="margin-bottom:2.25rem;">
+          <article class="card card--accent-blue" data-searchable>
+            <span class="pill pill--blue">Ciclo 1 Concluído · Edital 12/2025</span>
+            <h3>Base Consolidada em 2026 (SIGAA: PISJE4706-2025)</h3>
+            <ul class="check-list">
+              <li><strong>Sala de Música Permanente:</strong> adequação da antiga sala de projeções anexa ao auditório, com 32 calços antivibração e isolamento acústico.</li>
+              <li><strong>Acervo Instrumental Revitalizado:</strong> restauração da bateria acústica e aquisição de 11 pandeiros/pandeirolas, 6 ganzás, triângulo, afinadores e microfonia sem fio (execução integral do AFP).</li>
+              <li><strong>Protagonismo e Regência Discente:</strong> o bolsista João Alvarenga Lourenção expandiu o domínio da bateria para violão, guitarra, baixo e teclado, assumindo a regência das oficinas e decidindo cursar Licenciatura em Música (UDESC).</li>
+              <li><strong>Avaliação Qualitativa Contínua:</strong> observação participante e diários de campo alinhados às dimensões de autonomia (IAAD), humor/vigor (POMS) e letramento científico (GSLQ).</li>
+            </ul>
+          </article>
+
+          <article class="card card--accent-green" data-searchable>
+            <span class="pill">Ciclo 2 · Parceria 2027 (Edital 16/2026)</span>
+            <h3>Integração com a Sinfonia da Permanência</h3>
+            <p>Em parceria com o especialista em Educação Ambiental <strong>Fábio Henrique de Carvalho Bartelega</strong>, autor do projeto <em>Sinfonia da Permanência</em>, a edição 2027 une a tutoria <em>Músico de Apoio</em> à Eco-Lutheria e à Dupla Ancoragem (TAS + PNL-VAC):</p>
+            <ul class="check-list">
+              <li><strong>Bancada de Eco-Lutheria Experimental:</strong> construção de 15+ instrumentos afinados (<span class="mono">&lt; 5 cents</span>) com PVC, PET, latas metálicas e celulose.</li>
+              <li><strong>Domo Geodésico 2V (Organizador Prévio 3D):</strong> estrutura autoportante de 65 barras e 26 conectores organizada por tempo de degradação ambiental.</li>
+              <li><strong>Biossegurança e Metrologia:</strong> triagem com EPIs, balanço gravimétrico (kg) e validação espectral digital.</li>
+              <li><strong>Transferência de Tecnologia Social:</strong> portal web aberto e Guia Técnico-Pedagógico replicável.</li>
+            </ul>
+          </article>
+        </div>
+
+        <header class="section-header">
+          <span class="section-tag">Alicerce Didático</span>
+          <h2>Cinco Momentos da Pedagogia Histórico-Crítica (Gasparin / Saviani)</h2>
+        </header>
+        <div class="steps-grid">
+          <div class="step-box" data-searchable><span class="step-num">1</span><h4>Prática Social Inicial</h4><p>Escuta ativa das vivências musicais dos discentes e sensibilização socioambiental.</p></div>
+          <div class="step-box" data-searchable><span class="step-num">2</span><h4>Problematização</h4><p>Análise do acesso à música, inclusão no EMI e impacto químico-ambiental dos resíduos.</p></div>
+          <div class="step-box" data-searchable><span class="step-num">3</span><h4>Instrumentalização</h4><p>Oficinas práticas de harmonia, ritmo, acústica física e engenharia do Domo 2V.</p></div>
+          <div class="step-box" data-searchable><span class="step-num">4</span><h4>Catarse</h4><p>Ensaios cooperativos liderados pelos tutores pares e síntese conceitual integrada.</p></div>
+          <div class="step-box" data-searchable><span class="step-num">5</span><h4>Prática Social Final</h4><p>Apresentações públicas abertas à comunidade e difusão do manual como Tecnologia Social.</p></div>
+        </div>
+
+      <nav class="page-pager" aria-label="Navegação entre páginas">
+        <a href="index.html" class="pager-link"><span class="pager-dir">← Página anterior</span><span class="pager-title">Início</span></a>
+        <a href="projeto-rac-and-roll.html" class="pager-link pager-link--next"><span class="pager-dir">Próxima página →</span><span class="pager-title">Banda RAC &amp; Roll</span></a>
+      </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ INSTITUCIONAL -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/img/ifsc-horizontal-branco.png" alt="Instituto Federal de Santa Catarina — IFSC" class="footer-logo" width="128" height="44">
+          <p style="font-size:0.86rem;color:var(--text-on-dark-muted);margin:0;max-width:44ch;">
+            <strong>Programa Músico de Apoio &amp; Sinfonia da Permanência</strong><br>
+            Instituto Federal de Santa Catarina — Câmpus São José.<br>
+            Pesquisa Aplicada, Cultura e Tecnologia Social (Editais nº 12/2025 e nº 16/2026/PROPPI/DAE).
+          </p>
+        </div>
+
+        <div>
+          <h3>Páginas &amp; Submenus</h3>
+          <ul class="footer-links">
+            <li><a href="projeto.html">Projetos (Músico de Apoio · RAC &amp; Roll · 2027)</a></li>
+            <li><a href="oficinas.html">Oficinas &amp; Estúdio Digital</a></li>
+            <li><a href="eventos.html">Eventos (Portfólio 2026 · Agenda 2027)</a></li>
+            <li><a href="tecnologia-social.html">Tecnologia Social &amp; Apostilas</a></li>
+            <li><a href="sinfonia-inovacao.html">Sinfonia &amp; Inovação (Calculadoras · BNCC)</a></li>
+            <li><a href="equipe.html">Equipe e Ética</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Acervos e Links Institucionais</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.ifsc.edu.br/web/campus-sao-jose" target="_blank" rel="noopener noreferrer">Portal IFSC Câmpus São José ↗</a></li>
+            <li><a href="https://drive.google.com/drive/folders/19b-qqgw5ElqcGSa6ewLfSHoE83AjjyEx?usp=sharing" target="_blank" rel="noopener noreferrer">Acervo SNCT / MCC 2026 ↗</a></li>
+            <li><a href="https://www.youtube.com/live/t1BAm_mXt-0" target="_blank" rel="noopener noreferrer">Aulão de Vestibular (YouTube Live) ↗</a></li>
+            <li><a href="https://drive.google.com/drive/folders/1a1DQWz-fpDmJqDzLh6jj91_zjrW52owD?usp=drive_link" target="_blank" rel="noopener noreferrer">Gravações Feira de Jogos 2026.2 ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span><strong>Desenvolvido por Prof. Humberto Luz Oliveira</strong> · IFSC Câmpus São José · Tecnologia Social Aberta (GitHub + Cloudflare Pages)</span>
+        <span>Em conformidade com eMAG 3.1, WCAG 2.2 AA, LGPD e Manual da Marca IFSC</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- VLibras Widget Oficial do Governo Federal -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>if (window.VLibras) { new window.VLibras.Widget('https://vlibras.gov.br/app'); }</script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
