@@ -20,7 +20,10 @@ Portal institucional **multipágina e expansível (v3.0)** concebido como **guar
   - `sinfonia-bncc.html`: Matriz Interdisciplinar BNCC (5 UCs / 11 Habilidades) e Trilha dos 7 Encontros.
 - `equipe.html`: **Equipe e Ética** — ficha técnica, 6 ODS da ONU, acessibilidade eMAG/WCAG/TEA e conformidade LGPD/ECA.
 
-## Deploy no Cloudflare Pages (Custo Zero)
-1. Suba o conteúdo desta pasta `site-2027/` para um repositório GitHub dedicado (ex.: `Humba-IFSC/musico-apoio-portal`).
-2. Conecte no **Cloudflare Pages** com **Framework preset:** `None`, **Build command:** vazio, **Output directory:** `.`.
-3. Para adicionar novas subpáginas ou projetos no futuro, basta criar o HTML correspondente e incluir a entrada no menu dropdown.
+## Links Oficiais Publicados
+- **Portal Online (Cloudflare — Acesso Público sem Senha):** https://musico-apoio-ifsc.hloliveira.workers.dev
+- **Repositório GitHub (Público):** https://github.com/Humba-IFSC/musico-apoio-portal
+
+## Como Atualizar e Publicar (Cloudflare CLI)
+1. Após editar via `scripts/build_site.py`, faça commit e push na branch `main`.
+2. Dentro da pasta do site, execute `wrangler deploy` para atualizar os arquivos estáticos em segundos (ou conecte o repositório diretamente no painel Cloudflare Pages/Workers Builds para deploy automático a cada `git push`).

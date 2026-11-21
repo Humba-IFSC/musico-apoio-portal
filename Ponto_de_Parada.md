@@ -1,9 +1,11 @@
 # 📌 Ponto de Parada — Portal Programa Músico de Apoio & Sinfonia da Permanência
 
-**Última atualização válida:** 21/11/2026 (01h15)  
-**Versão atual do site:** `v3.1` (Arquitetura Multipágina Guarda-Chuva com Menus Expansíveis + Créditos + Agente Dedicado)  
+**Última atualização válida:** 21/11/2026 (01h35)  
+**Versão atual do site:** `v3.1` (Arquitetura Multipágina Guarda-Chuva com Menus Expansíveis + Créditos + Agente Dedicado + Publicado no GitHub e Cloudflare)  
 **Desenvolvido por:** Prof. Humberto Luz Oliveira — IFSC Câmpus São José  
-**Diretório do portal:** `musico-apoio/site-2027/`
+**Diretório local do portal:** `musico-apoio/site-2027/`  
+**Repositório GitHub (Público):** https://github.com/Humba-IFSC/musico-apoio-portal  
+**Portal Online (Cloudflare Pages / Static Assets — Acesso Público sem Senha):** https://musico-apoio-ifsc.hloliveira.workers.dev
 
 ---
 
@@ -54,7 +56,7 @@ Para manter 100% do design gráfico (cores IFSC, tipografia Open Sans, acessibil
 
 ## 📋 Próximos Passos Sugeridos (Backlog para Próximas Sessões)
 
-- [ ] **Publicação Oficial (Deploy):** Criar repositório GitHub dedicado (ex.: `Humba-IFSC/musico-apoio-portal`) com o conteúdo de `musico-apoio/site-2027/` e conectar no **Cloudflare Pages** (custo zero, sem senha de acesso).
+- [x] **Publicação Oficial (Deploy):** Repositório GitHub público criado (`https://github.com/Humba-IFSC/musico-apoio-portal`) e publicado no Cloudflare (`https://musico-apoio-ifsc.hloliveira.workers.dev`), 100% aberto e sem senha de acesso. ✅ CONCLUÍDO (21/11/2026)
 - [ ] **Galeria de Imagens Autorizadas:** Inserir fotos da Sala de Música, da Banda RAC & Roll e dos eventos (somente com TALE/autorização de imagem, respeitando LGPD/ECA).
 - [ ] **Downloads de PDFs Públicos:** Adicionar na página `apostilas.html` e `tecnologia-social.html` os links de download das apostilas finais e do *Manual de Implementação* assim que revisados para difusão pública.
 - [ ] **Expansão 2027:** Quando as novas iniciativas de 2027 deixarem de ser sigilosas, acionar o agente `maestro-web-musico-apoio` para criar as subpáginas dedicadas dentro do submenu **Projetos ▾** e atualizar a **Agenda 2027**.
