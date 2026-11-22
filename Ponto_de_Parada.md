@@ -1,6 +1,6 @@
 # 📌 Ponto de Parada — Portal Programa Músico de Apoio & Sinfonia da Permanência
 
-**Última atualização válida:** 22/11/2026 (20h22)  
+**Última atualização válida:** 22/11/2026 (20h47)  
 **Versão atual do site:** `v3.2` (Arquitetura Multipágina Guarda-Chuva 13 páginas · Vitrine de Prospecção & Parcerias 2027 + Sala de Estratégia Interna em `musico-apoio/Prospectar/`)  
 **Desenvolvido por:** Prof. Humberto Luz Oliveira — IFSC Câmpus São José  
 **Diretório local do portal:** `musico-apoio/site-2027/`  
@@ -61,5 +61,50 @@ Criados os 3 documentos táticos de planejamento e captação (mantidos fora do 
 - [ ] **Galeria de Imagens Autorizadas:** Inserir fotos da Sala de Música, da Banda RAC & Roll e dos eventos (somente com TALE/autorização de imagem, respeitando LGPD/ECA).
 - [ ] **Downloads de PDFs Públicos:** Adicionar na página `apostilas.html` e `tecnologia-social.html` os links de download das apostilas finais e do *Manual de Implementação* assim que revisados para difusão pública.
 - [ ] **Expansão 2027:** Quando as novas iniciativas de 2027 deixarem de ser sigilosas, acionar o agente `maestro-web-musico-apoio` para criar as subpáginas dedicadas dentro do submenu **Projetos ▾** e atualizar a **Agenda 2027**.
-- [ ] **Integração com o Portal Ensino IFSC:** Substituir ou redirecionar o antigo `musico-apoio/index.html` para o novo domínio público do Cloudflare Pages após a publicação.
+- [ ] **Integração com o Portal Ensino IFSC:** Substituir ou redirecionar o antigo `musico-apoio/index.html` para o novo domínio público do portal após a publicação definitiva.
+- [ ] **Subdomínio Institucional IFSC (`musicoapoio.sj.ifsc.edu.br`):** Protocolar alinhamento na DIRCOM e chamado técnico na DTIC (`chamados.ifsc.edu.br`) usando o roteiro abaixo, e atualizar o QR Code do Dossiê após a ativação.
+
+---
+
+## 🏛️ Roteiro para Solicitação de Subdomínio Institucional IFSC (DTIC / DIRCOM)
+
+Para migrar futuramente do endereço provisório (`https://musico-apoio-ifsc-sje.hloliveira.workers.dev`) para um domínio oficial do instituto (sugestão: `musicoapoio.sj.ifsc.edu.br` ou `musicoapoio.ifsc.edu.br`), seguir as 4 etapas:
+
+### 1. Alinhamento prévio no Câmpus São José
+- Comunicar a Direção-Geral (ou Direção de Ensino/Pesquisa/Extensão) do câmpus sobre o pedido do subdomínio para o **Programa Músico de Apoio**, citando os Editais nº 12/2025 e nº 16/2026/PROPPI/DAE.
+- Consultar previamente a Comunicação e a TI locais (CTIC) do câmpus para alinhar a abertura do chamado.
+
+### 2. Validação do canal junto à Comunicação (DIRCOM)
+- Pela Política de Comunicação do IFSC, novos sites e subdomínios de projetos passam pela análise da DIRCOM (identidade visual, objetivos institucionais, acessibilidade e servidores responsáveis).
+- Enviar consulta/validação para `suporte.comunicacao@ifsc.edu.br` (ou via comunicação do câmpus) com o link da prévia atual (`https://musico-apoio-ifsc-sje.hloliveira.workers.dev`), destacando a conformidade integral com o **Manual da Marca IFSC 2017**, acessibilidade **eMAG 3.1 / WCAG 2.2 AA + VLibras** e **LGPD/ECA**.
+
+### 3. Abertura de chamado técnico na DTIC
+- Acessar **https://chamados.ifsc.edu.br** com as credenciais da Intranet e abrir chamado direcionado à **DTIC — Infraestrutura / Redes / Hospedagem de Portais** (contato institucional: `dtic@ifsc.edu.br`).
+- Deixar abertas as duas opções técnicas compatíveis com a política da DTIC:
+  - **Opção A — Hospedagem estática nos servidores do IFSC:** site 100% estático (HTML5, CSS3, JS puro e PNGs, sem banco de dados ou backend PHP), sem risco de segurança de servidor.
+  - **Opção B — Apontamento DNS (`CNAME`):** criação de registro `CNAME` de `musicoapoio.sj.ifsc.edu.br` para hospedagem externa aprovada (Cloudflare / GitHub Pages, com *Custom Domain* e HTTPS automático).
+
+### 4. Configuração final após a aprovação
+- **Se hospedagem interna no IFSC:** fornecer o pacote estático gerado em `musico-apoio/site-2027/` (ou o repositório público `https://github.com/Humba-IFSC/musico-apoio-portal`).
+- **Se apontamento `CNAME`:** vincular o domínio institucional nas configurações da hospedagem e acionar o agente `maestro-web-musico-apoio` para atualizar URLs, documentação e o QR Code do Dossiê Executivo.
+
+### Modelo Pronto de Texto para o Chamado (`chamados.ifsc.edu.br`)
+
+> **Assunto:** Solicitação de subdomínio institucional (`musicoapoio.sj.ifsc.edu.br`) — Projeto Músico de Apoio (Câmpus São José)
+>
+> Prezados(as),
+>
+> Solicito a criação do subdomínio institucional **`musicoapoio.sj.ifsc.edu.br`** (ou alternativa padrão recomendada pela DTIC/DIRCOM) para publicação do portal do **Programa Músico de Apoio & Sinfonia da Permanência**, projeto de extensão e pesquisa do **IFSC Câmpus São José** (Editais nº 12/2025 e nº 16/2026/PROPPI/DAE).
+>
+> - **Prévia atual para avaliação:** https://musico-apoio-ifsc-sje.hloliveira.workers.dev
+> - **Repositório público (código-fonte):** https://github.com/Humba-IFSC/musico-apoio-portal
+> - **Arquitetura técnica:** site 100% estático (HTML5, CSS3 e JavaScript puro — sem banco de dados, sem backend e sem coleta de dados pessoais).
+> - **Conformidade institucional:** Manual da Marca IFSC 2017, diretrizes de acessibilidade eMAG 3.1 / WCAG 2.2 AA (Alto Contraste, atalhos eMAG, modo Conforto Sensorial TEA e VLibras) e conformidade LGPD/ECA.
+> - **Servidores responsáveis pela manutenção:** Prof. Humberto Luz Oliveira (desenvolvimento e atualização técnica) e Prof. Jorge Luiz Pereira (coordenação do projeto — Câmpus São José).
+>
+> Fico à disposição para seguir o modelo recomendado pela DTIC — seja via **hospedagem estática nos servidores do IFSC** ou via **apontamento DNS (`CNAME`)** — bem como para eventuais ajustes solicitados pela DIRCOM.
+>
+> Atenciosamente,  
+> **Prof. Humberto Luz Oliveira**  
+> IFSC — Câmpus São José
 
