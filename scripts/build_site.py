@@ -13,7 +13,8 @@ NAV_STRUCTURE = [
         "sub": [
             ("projeto.html", "Músico de Apoio (Base &amp; Editais)", "Metodologia PHC/PPE, Sala de Música e ciclos PROPPI/DAE"),
             ("projeto-rac-and-roll.html", "Banda RAC &amp; Roll", "Projeto musical organizado pelo Prof. Jorge Luiz Pereira"),
-            ("projetos-futuros.html", "Projetos Futuros · Ciclo 2027", "Incubadora de novas iniciativas e oficinas em planejamento"),
+            ("projetos-futuros.html", "Projetos Futuros · Ciclo 2027", "Incubadora de novas iniciativas e roadmap em desenvolvimento"),
+            ("parcerias.html", "Parcerias &amp; Captação 2027", "Como apoiar via Emendas (MDE/LDB), FEESC ou Empresas de São José"),
         ],
     },
     {"href": "oficinas.html", "label": "Oficinas", "sub": []},
@@ -164,6 +165,7 @@ def render_shell(filename, page_title, meta_desc, body_html, extra_scripts=""):
           <h3>Páginas &amp; Submenus</h3>
           <ul class="footer-links">
             <li><a href="projeto.html">Projetos (Músico de Apoio · RAC &amp; Roll · 2027)</a></li>
+            <li><a href="parcerias.html">Parcerias &amp; Captação 2027 (Emendas / FEESC / Empresas)</a></li>
             <li><a href="oficinas.html">Oficinas &amp; Estúdio Digital</a></li>
             <li><a href="eventos.html">Eventos (Portfólio 2026 · Agenda 2027)</a></li>
             <li><a href="tecnologia-social.html">Tecnologia Social &amp; Apostilas</a></li>
@@ -254,8 +256,8 @@ INDEX_BODY = """    <section class="hero" id="inicio" aria-labelledby="hero-head
           </p>
           <div class="hero__actions">
             <a href="projeto.html" class="btn btn-primary">Explorar Projetos →</a>
+            <a href="parcerias.html" class="btn btn-secondary">Parcerias &amp; Captação 2027</a>
             <a href="sinfonia-inovacao.html" class="btn btn-secondary">Calculadoras 2027</a>
-            <a href="eventos.html" class="btn btn-secondary">Eventos &amp; Agenda</a>
           </div>
 
           <div class="hero__metrics" aria-label="Principais indicadores do programa">
@@ -323,10 +325,10 @@ INDEX_BODY = """    <section class="hero" id="inicio" aria-labelledby="hero-head
 
         <div class="grid-3">
           <a href="projeto.html" class="hub-card card--accent-green" data-searchable>
-            <span class="pill">Guarda-Chuva · 3 Subpáginas</span>
-            <h3>Projetos</h3>
-            <p>Músico de Apoio (PHC/PPE e Editais), Banda RAC &amp; Roll (Prof. Jorge Luiz Pereira) e Incubadora de Projetos Futuros 2027.</p>
-            <span class="hub-card__cta">Ver Projetos →</span>
+            <span class="pill">Guarda-Chuva · 4 Subpáginas</span>
+            <h3>Projetos &amp; Parcerias 2027</h3>
+            <p>Músico de Apoio (PHC/PPE e Editais), Banda RAC &amp; Roll (Prof. Jorge Luiz Pereira), Roadmap 2027 e Vitrine de Parcerias &amp; Captação.</p>
+            <span class="hub-card__cta">Ver Projetos e Parcerias →</span>
           </a>
 
           <a href="oficinas.html" class="hub-card card--accent-blue" data-searchable>
@@ -382,12 +384,12 @@ PROJETO_BODY = page_hero(
           <span class="section-tag">Subprojetos Integrados</span>
           <h2>Iniciativas Abrigadas pelo Programa</h2>
         </header>
-        <div class="grid-3" style="margin-bottom:2.75rem;">
+        <div class="grid-4" style="margin-bottom:2.75rem;">
           <div class="card card--accent-green" data-searchable>
             <span class="pill">Núcleo Principal · Editais 12/2025 e 16/2026</span>
             <h3>Músico de Apoio (Pesquisa &amp; Tutoria)</h3>
             <p>Validação da tutoria musical por pares (PHC/PPE), Sala de Música acústica e integração interdisciplinar com a <em>Sinfonia da Permanência</em>.</p>
-            <span style="font-size:0.82rem;font-weight:700;color:var(--ifsc-verde-escuro);">Você está nesta página ↓</span>
+            <span style="font-size:0.82rem;font-weight:700;color:var(--ifsc-verde-escuro);margin-top:auto;">Você está nesta página ↓</span>
           </div>
           <a href="projeto-rac-and-roll.html" class="hub-card card--accent-red" data-searchable>
             <span class="pill pill--red">Prática de Conjunto · Cultura</span>
@@ -396,10 +398,16 @@ PROJETO_BODY = page_hero(
             <span class="hub-card__cta">Abrir página RAC &amp; Roll →</span>
           </a>
           <a href="projetos-futuros.html" class="hub-card card--accent-blue" data-searchable>
-            <span class="pill pill--blue">Incubadora · Ciclo 2027</span>
+            <span class="pill pill--blue">Roadmap · Ciclo 2027</span>
             <h3>Projetos Futuros &amp; Novas Frentes</h3>
-            <p>Espaço aberto para novas oficinas temáticas, espetáculos coletivos e propostas em incubação para o ano letivo de 2027.</p>
+            <p>Caderno de Eco-Lutheria, Livro de Coletâneas Multimídia e propostas em planejamento para o ano letivo de 2027.</p>
             <span class="hub-card__cta">Ver Projetos Futuros →</span>
+          </a>
+          <a href="parcerias.html" class="hub-card card--accent-green" data-searchable>
+            <span class="pill pill--amber">Captação · MDE / FEESC</span>
+            <h3>Parcerias &amp; Captação 2027</h3>
+            <p>Plano orçamentário 2027 (Ações 20RL e 2994) e vias legais de apoio via Emendas Federais e Empresas de São José.</p>
+            <span class="hub-card__cta">Ver Parcerias 2027 →</span>
           </a>
         </div>
 
@@ -497,51 +505,183 @@ RAC_BODY = page_hero(
     </section>"""
 
 # ============================================================================
-# 2C. PROJETOS-FUTUROS.HTML — INCUBADORA CICLO 2027 (SEM CONTEÚDO SIGILOSO!)
+# 2C. PROJETOS-FUTUROS.HTML — ROADMAP & PROSPECÇÃO 2027 (SEM SIGILO)
 # ============================================================================
 FUTUROS_BODY = page_hero(
     [("Projetos", "projeto.html"), ("Projetos Futuros · 2027", None)],
-    "Projetos Futuros &amp; Novas Iniciativas (Ciclo 2027)",
-    "Incubadora de ideias, oficinas temáticas e projetos de ensino, pesquisa e extensão em planejamento para expansão do ecossistema musical no IFSC Câmpus São José."
+    "Projetos Futuros &amp; Roadmap de Prospecção (Ciclo 2027)",
+    "Painel de iniciativas, materiais didáticos e expansões estruturais em discussão e desenvolvimento para o ciclo 2027 no IFSC Câmpus São José."
 ) + """
     <section class="section">
       <div class="container">
-        <div class="grid-3" style="margin-bottom:2rem;">
+        <div class="grid-2" style="margin-bottom:2rem;">
           <article class="card card--accent-green" data-searchable>
-            <span class="pill">Em Implantação · 2027</span>
-            <h3>Sinfonia da Permanência (Edital 16/2026)</h3>
-            <p>Fusão da tutoria por pares com a Eco-Lutheria Experimental e a montagem do Domo Geodésico 2V em parceria com <strong>Fábio Henrique de Carvalho Bartelega</strong>.</p>
+            <span class="pill">🔬 Em Desenvolvimento · Ciclo 2027</span>
+            <h3>Caderno de Eco-Lutheria &amp; Calculadora Web</h3>
+            <p>Frente de investigação científica liderada por <strong>Fábio Henrique de Carvalho Bartelega</strong>, <strong>Prof. Humberto Luz Oliveira</strong> e <strong>Prof. Jorge Luiz Pereira</strong>, transformando PVC, garrafas PET e latas metálicas em instrumentos afinados (<span class="mono">f = v / 2L</span>) acoplados ao Domo Geodésico 2V.</p>
             <div style="margin-top:auto;padding-top:0.5rem;">
-              <a href="sinfonia-inovacao.html" class="btn btn-primary btn-sm">Ver Sinfonia &amp; Inovação →</a>
+              <a href="sinfonia-inovacao.html" class="btn btn-primary btn-sm">Abrir Calculadoras Científicas →</a>
             </div>
           </article>
 
           <article class="card card--accent-blue" data-searchable>
-            <span class="pill pill--blue">Em Planejamento · 2027</span>
-            <h3>Oficinas Temáticas &amp; Repertórios Especiais</h3>
-            <p>Novas frentes artísticas e didáticas articulando os oficineiros, tutores formados em 2026 e docentes parceiros na criação de arranjos temáticos e apresentações integradas para a comunidade do câmpus.</p>
-            <p style="font-size:0.82rem;color:var(--text-muted);"><em>Detalhamento de repertório e calendário será publicado após aprovação do planejamento anual de 2027.</em></p>
+            <span class="pill pill--blue">💬 Em Discussão com a Equipe</span>
+            <h3>Livro de Coletâneas Multimídia (MP3 · MP4 · PDF · E-book)</h3>
+            <p>Consolidação dos estudos semanais por instrumento (Baixo Elétrico, Violão/Guitarra e Teclado) em um E-book integrado com playbacks em áudio (MP3), demonstrações em vídeo (MP4) e cifras/partituras em PDF.</p>
+            <div style="margin-top:auto;padding-top:0.5rem;">
+              <a href="apostilas.html" class="btn btn-secondary btn-sm">Ver Estudos Semanais →</a>
+            </div>
           </article>
 
           <article class="card card--accent-red" data-searchable>
-            <span class="pill pill--red">Expansão Institucional</span>
-            <h3>Rede Colaborativa de Câmpus IFSC</h3>
-            <p>Compartilhamento do <em>Manual de Implementação Músico de Apoio</em>, das calculadoras web e de oficinas interativas com outros câmpus da Rede Federal e escolas públicas parceiras.</p>
+            <span class="pill pill--amber">🏛 Em Captação · Ação 20RL (GND 4 / GND 3)</span>
+            <h3>Modernização do Acervo &amp; Almoxarifado Próprio</h3>
+            <p>Aquisição patrimonial de contrabaixo elétrico, guitarra com amplificadores, bateria acústica completa, reposição contínua de cordas/peles e instalação de almoxarifado dedicado com fechadura na Sala de Música para conservação dos equipamentos.</p>
             <div style="margin-top:auto;padding-top:0.5rem;">
-              <a href="tecnologia-social.html" class="btn btn-secondary btn-sm">Ver Tecnologia Social →</a>
+              <a href="parcerias.html" class="btn btn-secondary btn-sm">Ver Plano de Captação →</a>
+            </div>
+          </article>
+
+          <article class="card card--accent-green" data-searchable>
+            <span class="pill pill--amber">🤝 Em Captação · Ação 2994 (PNAES / FEESC)</span>
+            <h3>Expansão de Bolsas de Permanência em 2 Turnos</h3>
+            <p>Ampliação das cotas de bolsas de tutoria e permanência (custeio de alimentação e transporte em dois turnos letivos) para que estudantes multiplicadores e oficineiros atuem com dedicação integral ao projeto.</p>
+            <div style="margin-top:auto;padding-top:0.5rem;">
+              <a href="parcerias.html" class="btn btn-primary btn-sm">Como Apoiar em 2027 →</a>
             </div>
           </article>
         </div>
 
-        <div class="card" data-searchable>
-          <span class="pill">Arquitetura Aberta</span>
-          <h3>Proponha uma nova iniciativa sob o guarda-chuva</h3>
-          <p>
-            Este portal foi estruturado para crescer organicamente: a cada nova oficina temática, banda estudantil, experimento de acústica ou projeto de extensão aprovado, uma nova subpágina dedicada é publicada e vinculada diretamente ao menu <strong>Projetos</strong>.
+        <div class="grid-2" style="margin-bottom:1.5rem;">
+          <article class="card" data-searchable>
+            <span class="pill pill--blue">💬 Em Planejamento · 2027</span>
+            <h3>Oficinas Temáticas &amp; Repertórios Especiais</h3>
+            <p>Novas frentes artísticas e didáticas articulando oficineiros, tutores formados em 2026 e docentes parceiros na criação de arranjos temáticos e apresentações integradas para a comunidade do câmpus.</p>
+          </article>
+
+          <article class="card" data-searchable>
+            <span class="pill">🌐 Transferência Social</span>
+            <h3>Rede Colaborativa de Câmpus IFSC</h3>
+            <p>Compartilhamento do <em>Manual de Implementação Músico de Apoio</em>, dos estudos semanais e das calculadoras web com outros câmpus da Rede Federal e escolas públicas.</p>
+          </article>
+        </div>
+
+""" + pager(("projeto-rac-and-roll.html", "Banda RAC &amp; Roll"), ("parcerias.html", "Parcerias &amp; Captação 2027")) + """
+      </div>
+    </section>"""
+
+# ============================================================================
+# 2D. PARCERIAS.HTML — VITRINE INSTITUCIONAL DE PARCERIAS & CAPTAÇÃO 2027
+# ============================================================================
+PARCERIAS_BODY = page_hero(
+    [("Projetos", "projeto.html"), ("Parcerias &amp; Captação 2027", None)],
+    "Parcerias &amp; Captação Institucional (Ciclo 2027)",
+    "Vitrine técnica e apartidária de apoio ao Programa Músico de Apoio &amp; Sinfonia da Permanência (IFSC Câmpus São José): entregas comprovadas em 2026, rubricas de investimento 2027 e vias legais de fomento."
+) + """
+    <section class="section">
+      <div class="container">
+        <!-- Provas de Entrega 2026 -->
+        <header class="section-header">
+          <span class="section-tag">Retorno Institucional Comprovado</span>
+          <h2>Por que Investir no Programa Músico de Apoio?</h2>
+          <p>Enquadrado na <strong>Manutenção e Desenvolvimento do Ensino (MDE — LDB)</strong>, o projeto combate a evasão escolar no Ensino Médio Integrado por meio de inclusão, protagonismo discente e ciência aplicada.</p>
+        </header>
+
+        <div class="grid-4" style="margin-bottom:2.5rem;">
+          <div class="metric-item" data-searchable>
+            <span class="metric-value">100% AFP</span>
+            <span class="metric-label">Execução integral do fomento 2026 (PISJE4706-2025)</span>
+          </div>
+          <div class="metric-item" data-searchable>
+            <span class="metric-value">1 Estúdio</span>
+            <span class="metric-label">Sala de Música reformada com 32 calços acústicos</span>
+          </div>
+          <div class="metric-item" data-searchable>
+            <span class="metric-value">3 Eventos</span>
+            <span class="metric-label">23ª SNCT, Aulão Live estadual e Feira de Jogos</span>
+          </div>
+          <div class="metric-item" data-searchable>
+            <span class="metric-value">6 ODS ONU</span>
+            <span class="metric-label">ODS 3, 4, 10, 11, 12 e 13 + inclusão PNAES/NAPNE</span>
+          </div>
+        </div>
+
+        <!-- 3 Frentes de Investimento 2027 -->
+        <header class="section-header">
+          <span class="section-tag">Plano Orçamentário 2027 · Enquadramento MDE / SIOP</span>
+          <h2>3 Frentes de Investimento para a Expansão 2027</h2>
+          <p>Superando o teto dos editais internos, o fomento externo estrutura o acervo permanente do câmpus e amplia a permanência estudantil em dois turnos.</p>
+        </header>
+
+        <div class="grid-3" style="margin-bottom:2.5rem;">
+          <article class="card card--accent-green" data-searchable>
+            <span class="pill">Ação 20RL · GND 4 (Investimento)</span>
+            <h3>1. Equipamentos &amp; Almoxarifado</h3>
+            <ul class="check-list">
+              <li>Aquisição patrimonial de contrabaixo elétrico, guitarra e amplificadores.</li>
+              <li>Bateria acústica completa, jogo de pratos e ferragens permanentes do câmpus.</li>
+              <li>Implantação física de <strong>almoxarifado próprio com porta e fechadura</strong> na Sala de Música.</li>
+            </ul>
+          </article>
+
+          <article class="card card--accent-blue" data-searchable>
+            <span class="pill pill--blue">Ação 20RL · GND 3 (Custeio)</span>
+            <h3>2. Manutenção &amp; Eco-Lutheria</h3>
+            <ul class="check-list">
+              <li>Reposição contínua de encordoamentos, peles hidráulicas, palhetas, cabos P10/XLR e conectores.</li>
+              <li>Insumos para o <strong>Caderno de Eco-Lutheria</strong> (tubos de PVC, conectores do Domo 2V e EPIs).</li>
+              <li>Produção e diagramação do <em>Livro de Coletâneas Multimídia</em> e apostilas abertas.</li>
+            </ul>
+          </article>
+
+          <article class="card card--accent-red" data-searchable>
+            <span class="pill pill--red">Ação 2994 · PNAES / FEESC</span>
+            <h3>3. Bolsas de Permanência (2 Turnos)</h3>
+            <ul class="check-list">
+              <li>Cotas de bolsas de tutoria e extensão para estudantes multiplicadores e oficineiros.</li>
+              <li>Auxílio para permanência em <strong>dois turnos letivos</strong> (alimentação e transporte).</li>
+              <li>Combate direto à vulnerabilidade socioeconômica e fortalecimento da PPE.</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- 3 Caminhos Legais de Apoio -->
+        <header class="section-header">
+          <span class="section-tag">Segurança Jurídica e Fluxo Institucional</span>
+          <h2>Caminhos Legais para Apoiar o Projeto</h2>
+        </header>
+
+        <div class="grid-3" style="margin-bottom:2rem;">
+          <article class="card" data-searchable>
+            <span class="pill">Via Orçamentária Direta · MEC</span>
+            <h3>Emendas Parlamentares Federais</h3>
+            <p>Indicação no Orçamento da União vinculada ao MEC / IFSC (Ações 20RL e 2994, fundamentadas em MDE), com acompanhamento institucional da Reitoria e da Direção-Geral do Câmpus São José.</p>
+          </article>
+
+          <article class="card" data-searchable>
+            <span class="pill pill--blue">Fundação de Apoio · FEESC</span>
+            <h3>Empresas de São José &amp; ESG</h3>
+            <p>Parcerias com empresas da região via <strong>FEESC</strong> (Fundação Stemmer para Pesquisa, Desenvolvimento e Inovação — credenciada ao IFSC pela <strong>Lei nº 8.958/1994</strong> e <strong>Resolução CONSUP/IFSC nº 61/2016</strong>).</p>
+          </article>
+
+          <article class="card" data-searchable>
+            <span class="pill pill--red">Termo de Doação · Patrimônio</span>
+            <h3>Doação Patrimonial de Instrumentos</h3>
+            <p>Empresas, instituições e apoiadores podem doar instrumentos musicais ou insumos didáticos diretamente ao patrimônio do IFSC Câmpus São José mediante termo oficial.</p>
+          </article>
+        </div>
+
+        <div class="ethics-box" data-searchable>
+          <h2 style="margin:0 0 0.65rem;font-size:1.1rem;">Compromisso de Transparência e Prestação de Contas Pública</h2>
+          <p style="margin:0 0 0.65rem;font-size:0.9rem;color:var(--text-secondary);">
+            Todos os recursos captados e equipamentos incorporados são acompanhados pelos órgãos de controle do IFSC, divulgados com transparência institucional neste portal e apresentados publicamente à comunidade no concerto didático da <strong>24ª SNCT / MCC</strong> e no <strong>Didascálico</strong> (Mostra de Arte e Cultura do IFSC).
+          </p>
+          <p style="margin:0;font-size:0.86rem;">
+            <strong>Contato para parcerias institucionais:</strong> Prof. Jorge Luiz Pereira (Coordenação) e Prof. Humberto Luz Oliveira (Colaboração) — IFSC Câmpus São José (<a href="equipe.html">ver Ficha Técnica e Governança</a>).
           </p>
         </div>
 
-""" + pager(("projeto-rac-and-roll.html", "Banda RAC &amp; Roll"), ("oficinas.html", "Oficinas")) + """
+""" + pager(("projetos-futuros.html", "Projetos Futuros · 2027"), ("oficinas.html", "Oficinas")) + """
       </div>
     </section>"""
 
@@ -654,7 +794,7 @@ OFICINAS_BODY = page_hero(
           </div>
         </div>
 
-""" + pager(("projetos-futuros.html", "Projetos Futuros · 2027"), ("eventos.html", "Eventos · Portfólio 2026")) + """
+""" + pager(("parcerias.html", "Parcerias &amp; Captação 2027"), ("eventos.html", "Eventos · Portfólio 2026")) + """
       </div>
     </section>"""
 
@@ -771,8 +911,8 @@ EVENTOS_2027_BODY = page_hero(
               </tr>
               <tr>
                 <td class="mono">Novembro / 2027</td>
-                <td><strong>Feira de Jogos &amp; Mostra Cultural de Encerramento</strong> — Apresentação das bandas estudantis e formatura da nova geração de tutores.</td>
-                <td>Músico de Apoio · Banda RAC &amp; Roll</td>
+                <td><strong>Didascálico (Mostra de Arte e Cultura do IFSC) &amp; Feira de Jogos</strong> — Apresentações artísticas no Câmpus São José, concerto didático comemorativo de prestação de contas pública e formatura da nova geração de tutores.</td>
+                <td>Músico de Apoio · Banda RAC &amp; Roll · Sinfonia da Permanência</td>
                 <td><span class="pill pill--blue">Previsto</span></td>
               </tr>
             </tbody>
@@ -872,10 +1012,42 @@ APOSTILAS_BODY = page_hero(
           <article class="card card--accent-red" data-searchable>
             <span class="pill pill--red">Em Expansão · 2027</span>
             <h3>Cadernos de Eco-Lutheria &amp; Novas Tecnologias</h3>
-            <p>Espaço destinado aos novos cadernos de montagem (tubofones PVC, membranofones metálicos, idiófonos PET) e novas soluções pedagógicas experimentadas e validadas nas próximas edições.</p>
+            <p>Caderno técnico desenvolvido com <strong>Fábio Henrique de Carvalho Bartelega</strong>, <strong>Prof. Humberto Luz Oliveira</strong> e <strong>Prof. Jorge Luiz Pereira</strong> para fabricação afinada de tubofones de PVC, latas metálicas e garrafas PET.</p>
             <div style="margin-top:auto;padding-top:0.5rem;">
               <a href="sinfonia-inovacao.html" class="btn btn-secondary btn-sm">Ir para Calculadoras →</a>
             </div>
+          </article>
+        </div>
+
+        <header class="section-header" style="margin-top:2.5rem;">
+          <span class="section-tag">Ciclo 2027 · Planejamento Pedagógico-Musical</span>
+          <h2>Estudos Semanais por Instrumento &amp; Livro de Coletâneas Multimídia</h2>
+          <p>Rotina contínua de estudos técnicos semanais para aprendizes e oficineiros, consolidando o repertório do ano letivo em um acervo multimídia unificado.</p>
+        </header>
+
+        <div class="grid-4" style="margin-bottom:1.5rem;">
+          <article class="card card--accent-green" data-searchable>
+            <span class="pill">Em Desenvolvimento · 2027</span>
+            <h3>🎸 Baixo Elétrico</h3>
+            <p>Estudos semanais de <em>riffs</em>, fraseados de condução, construção de motivos rítmicos, <em>grooves</em> e levadas para sustentação de banda.</p>
+          </article>
+
+          <article class="card card--accent-blue" data-searchable>
+            <span class="pill pill--blue">Em Desenvolvimento · 2027</span>
+            <h3>🎵 Violão &amp; Guitarra</h3>
+            <p>Fraseados melódicos, acompanhamento harmônico com dedos-pivô, levadas rítmicas e condução pedagógica coletiva nas oficinas.</p>
+          </article>
+
+          <article class="card card--accent-green" data-searchable>
+            <span class="pill">Em Desenvolvimento · 2027</span>
+            <h3>🎹 Teclado</h3>
+            <p>Mapeamento de acordes, inversões práticas, harmonização básica e apoio à base harmônica do conjunto estudantil.</p>
+          </article>
+
+          <article class="card card--accent-red" data-searchable>
+            <span class="pill pill--amber">Produto Editorial · Meta 2027</span>
+            <h3>📚 Livro de Coletâneas Multimídia</h3>
+            <p>Compilação anual em <strong>E-book / PDF</strong> (partituras e cifras) integrada a <strong>playbacks MP3</strong> e <strong>vídeos demonstrativos MP4</strong> para estudo autônomo.</p>
           </article>
         </div>
 
@@ -1168,7 +1340,8 @@ PAGES = [
     ("index.html", "Início", "Portal guarda-chuva do Programa Músico de Apoio, Banda RAC & Roll e Sinfonia da Permanência — IFSC Câmpus São José.", INDEX_BODY, ""),
     ("projeto.html", "Projetos · Músico de Apoio", "Programa guarda-chuva Músico de Apoio, metodologia PHC/PPE, Sala de Música e editais PROPPI/DAE.", PROJETO_BODY, ""),
     ("projeto-rac-and-roll.html", "Banda RAC & Roll", "Projeto musical Banda RAC & Roll organizado pelo Prof. Jorge Luiz Pereira no IFSC Câmpus São José.", RAC_BODY, ""),
-    ("projetos-futuros.html", "Projetos Futuros · Ciclo 2027", "Incubadora de novas iniciativas, oficinas temáticas e expansão do Programa Músico de Apoio em 2027.", FUTUROS_BODY, ""),
+    ("projetos-futuros.html", "Projetos Futuros · Ciclo 2027", "Roadmap de prospecção 2027: Caderno de Eco-Lutheria, Livro de Coletâneas Multimídia e expansão do Programa Músico de Apoio.", FUTUROS_BODY, ""),
+    ("parcerias.html", "Parcerias & Captação 2027", "Vitrine institucional de parcerias e captação 2027 para o Programa Músico de Apoio: Ação 20RL, Ação 2994 (PNAES) e FEESC.", PARCERIAS_BODY, ""),
     ("oficinas.html", "Oficinas & Estúdio Digital", "Oficinas musicais cooperativas e Estúdio Digital (Metrônomo e Diapasão Web Audio) no IFSC São José.", OFICINAS_BODY, ""),
     ("eventos.html", "Eventos · Portfólio 2026", "Portfólio público 2026: SNCT/MCC, Aulão de Vestibular no YouTube Live e Feira de Jogos 2026.2.", EVENTOS_BODY, ""),
     ("eventos-2027.html", "Eventos · Agenda 2027", "Calendário previsto de eventos e apresentações culturais do Programa Músico de Apoio em 2027.", EVENTOS_2027_BODY, ""),

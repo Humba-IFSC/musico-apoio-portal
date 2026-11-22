@@ -1,7 +1,7 @@
 # 📌 Ponto de Parada — Portal Programa Músico de Apoio & Sinfonia da Permanência
 
-**Última atualização válida:** 21/11/2026 (01h35)  
-**Versão atual do site:** `v3.1` (Arquitetura Multipágina Guarda-Chuva com Menus Expansíveis + Créditos + Agente Dedicado + Publicado no GitHub e Cloudflare)  
+**Última atualização válida:** 22/11/2026 (19h35)  
+**Versão atual do site:** `v3.2` (Arquitetura Multipágina Guarda-Chuva 13 páginas · Vitrine de Prospecção & Parcerias 2027 + Sala de Estratégia Interna em `musico-apoio/Prospectar/`)  
 **Desenvolvido por:** Prof. Humberto Luz Oliveira — IFSC Câmpus São José  
 **Diretório local do portal:** `musico-apoio/site-2027/`  
 **Repositório GitHub (Público):** https://github.com/Humba-IFSC/musico-apoio-portal  
@@ -21,36 +21,36 @@ Para manter 100% do design gráfico (cores IFSC, tipografia Open Sans, acessibil
 
 ---
 
-## ✅ Histórico do que foi Concluído na Última Sessão Válida (20–21/11/2026)
+## ✅ Histórico do que foi Concluído na Última Sessão Válida (22/11/2026 — Prospecção & Vitrine `v3.2`)
 
-### 1. Evolução da Arquitetura e Design (v1.0 → v2.0 → v3.1)
+### 1. Sala de Estratégia Interna (`musico-apoio/Prospectar/` — Estritamente Local / Privado)
+Criados os 3 documentos táticos de planejamento e captação (mantidos fora do site público e fora do GitHub público):
+- `musico-apoio/Prospectar/PAUTA_REUNIAO_EQUIPE_2027.md` — Pauta de deliberação com a equipe (estudos semanais por instrumento, fechamento de 3 orçamentos por rubrica `20RL` GND 4/3 e `2994`/FEESC com previsão de taxa administrativa, e enquadramento jurídico do *Livro de Coletâneas Multimídia*).
+- `musico-apoio/Prospectar/AGENDA_ACOES_2027.md` — Cronograma em 4 fases (Nov/2026 a Nov/2027) com estratégia federal (MDE/LDB), articulação estadual (ALESC) e empresas de São José.
+- `musico-apoio/Prospectar/DOSSIE_EXECUTIVO_CAPTACAO_2027.pdf` — Dossiê de 2 páginas A4, 100% impessoal e apartidário, com entregas de 2026, rubricas de 2027, vias legais (MEC/IFSC, FEESC Lei nº 8.958/1994 e Res. CONSUP/IFSC nº 61/2016) e QR Code para `/parcerias`.
+
+### 2. Vitrine Institucional Pública (`v3.2` — 13 Páginas HTML)
+- **Nova página `parcerias.html` (*Parcerias & Captação 2027*):** adicionada ao submenu **Projetos ▾**, ao card da Home (`4 Subpáginas`), ao Hero e ao rodapé; apresenta provas de entrega 2026, 3 frentes de investimento 2027 vinculadas a MDE/LDB (`20RL` GND 4/3, `2994`/PNAES/FEESC) e caminhos legais de apoio de forma 100% impessoal.
+- **Upgrade de `projetos-futuros.html`:** transformada em *Painel de Prospecção & Roadmap 2027* com selos de maturidade (`Em Desenvolvimento`, `Em Discussão com a Equipe`, `Em Captação`).
+- **Upgrade de `apostilas.html`:** nova seção *"Estudos Semanais por Instrumento & Livro de Coletâneas Multimídia (Em Desenvolvimento · 2027)"* (Baixo Elétrico, Violão/Guitarra, Teclado e futuro E-book/MP3/MP4/PDF), sem citar nomes de discentes em definição.
+- **Upgrade de `eventos-2027.html`:** inclusão do **Didascálico (Mostra de Arte e Cultura do IFSC — Novembro)** junto à 24ª SNCT/MCC 2027 como marcos de culminância e prestação de contas.
+- **Design System (`assets/css/style.css`):** adição do modificador `.pill--amber` para selos de captação e metas.
+- **Integridade validada (`v3.2`):** 13/13 páginas geradas via `scripts/build_site.py`, zero links quebrados, zero `autoplay`, zero strings partidárias/sigilosas/desatualizadas e crédito preservado em todas as páginas.
+
+---
+
+### Histórico Anterior Consolidado (`v1.0 → v3.1`, 20–21/11/2026)
 - **Design System Oficial IFSC 2017** em `assets/css/style.css`: paleta oficial (`#32A041`, `#1F6E2A`, `#C8191E`), fonte **Open Sans** (+ `JetBrains Mono` para fórmulas), logomarca horizontal oficial do IFSC (`assets/img/ifsc-horizontal-cor.png` e `ifsc-horizontal-branco.png`), sem mascotes.
 - **Acessibilidade Total (eMAG 3.1 · WCAG 2.2 AA · TEA/NAPNE):** barra no topo com `Alt+1` a `Alt+5`, controle de fonte (`A-`/`A`/`A+`), **Alto Contraste (WCAG AAA)** e **Conforto Sensorial** persistidos entre páginas (`localStorage`), widget **VLibras** e **zero autoplay** de áudio/vídeo.
-- **Arquitetura Multipágina Guarda-Chuva (12 páginas HTML)** com **menus horizontais e submenus verticais expansíveis** (hover no desktop, botão `▾` para teclado/mobile, fechamento com `Esc` e destaque automático do item pai e da subpágina ativa):
+- **Arquitetura Multipágina Guarda-Chuva** com **menus horizontais e submenus verticais expansíveis**:
   1. `index.html` — **Início** (Hero editorial + ilustração SVG do Domo 2V/ondas + 6 cards de entrada rápida).
-  2. **Projetos ▾** *(Guarda-Chuva)*:
-     - `projeto.html` — Músico de Apoio (Metodologia PHC/PPE, Sala de Música, Editais 12/2025 e 16/2026).
-     - `projeto-rac-and-roll.html` — **Banda RAC & Roll** (iniciativa musical organizada pelo Prof. Jorge Luiz Pereira).
-     - `projetos-futuros.html` — **Projetos Futuros · Ciclo 2027** (incubadora de novas iniciativas em planejamento — mantendo em sigilo projetos ainda não públicos).
+  2. **Projetos ▾** *(Guarda-Chuva)*: `projeto.html`, `projeto-rac-and-roll.html`, `projetos-futuros.html`, `parcerias.html`.
   3. `oficinas.html` — **Oficinas** (participação no EMI + Estúdio Digital: Metrônomo e Diapasão Web Audio sob clique).
-  4. **Eventos ▾**:
-     - `eventos.html` — Portfólio 2026 (23ª SNCT/8ª MCC, Aulão de Vestibular no YouTube Live sob demanda e Feira de Jogos 2026.2 com repertório).
-     - `eventos-2027.html` — Agenda & Eventos Previstos para 2027.
-  5. **Tecnologia Social ▾**:
-     - `tecnologia-social.html` — Manual de Implementação & Replicabilidade em 4 passos na Rede Federal.
-     - `apostilas.html` — Apostilas Autorais (Bateria, Violão/Dedos-Pivô) e espaço para novas tecnologias compartilhadas.
-  6. **Sinfonia & Inovação ▾**:
-     - `sinfonia-inovacao.html` — Parceria *Sinfonia da Permanência* (**Fábio Henrique de Carvalho Bartelega**) + Calculadoras Client-Side (**Tubofones de PVC** com correção de Helmholtz e **Domo Geodésico 2V** com diagrama SVG dinâmico e impressão de plano de corte).
-     - `sinfonia-bncc.html` — Matriz Interdisciplinar BNCC (5 UCs / 11 Habilidades) e Trilha dos 7 Encontros.
+  4. **Eventos ▾**: `eventos.html` (Portfólio 2026) e `eventos-2027.html` (Agenda 2027 com 24ª SNCT/MCC e Didascálico).
+  5. **Tecnologia Social ▾**: `tecnologia-social.html` (Manual) e `apostilas.html` (Apostilas + Estudos Semanais 2027).
+  6. **Sinfonia & Inovação ▾**: `sinfonia-inovacao.html` (Calculadoras Client-Side) e `sinfonia-bncc.html` (Matriz BNCC & 7 Encontros).
   7. `equipe.html` — **Equipe e Ética** (ficha técnica, 6 ODS da ONU, Declaração de Acessibilidade e conformidade LGPD/ECA/Lei 9.610/1998).
-
-### 2. Ajustes Finais e Automatização Validados
-- **Script gerador mestre preservado em `scripts/build_site.py`:** garante que qualquer inserção ou remoção no menu seja propagada de forma 100% sincronizada para todas as páginas, com verificador automático de links internos (`LINK CHECK OK`).
-- **Créditos oficiais conferidos:**
-  - `Prof. Humberto Luz Oliveira` (sem "Prof. Dr.") + crédito no rodapé de todas as 12 páginas: *"Desenvolvido por Prof. Humberto Luz Oliveira · IFSC Câmpus São José"*.
-  - `Fábio Henrique de Carvalho Bartelega` creditado como especialista em Educação Ambiental e autor do projeto parceiro *Sinfonia da Permanência*.
-  - `Prof. Jorge Luiz Pereira` creditado como Coordenador do Projeto Músico de Apoio-IFSC e organizador da Banda RAC & Roll.
-- **Integridade validada:** 12/12 páginas com zero links quebrados, zero `autoplay`, zero strings sigilosas/desatualizadas e sintaxe JavaScript limpa (`node --check`).
+- **Créditos oficiais conferidos:** `Prof. Humberto Luz Oliveira` (sem "Prof. Dr.") + crédito no rodapé de todas as 13 páginas; `Fábio Henrique de Carvalho Bartelega`; `Prof. Jorge Luiz Pereira`.
 
 ---
 
