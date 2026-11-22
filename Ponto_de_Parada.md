@@ -1,11 +1,11 @@
 # 📌 Ponto de Parada — Portal Programa Músico de Apoio & Sinfonia da Permanência
 
-**Última atualização válida:** 22/11/2026 (19h35)  
+**Última atualização válida:** 22/11/2026 (20h22)  
 **Versão atual do site:** `v3.2` (Arquitetura Multipágina Guarda-Chuva 13 páginas · Vitrine de Prospecção & Parcerias 2027 + Sala de Estratégia Interna em `musico-apoio/Prospectar/`)  
 **Desenvolvido por:** Prof. Humberto Luz Oliveira — IFSC Câmpus São José  
 **Diretório local do portal:** `musico-apoio/site-2027/`  
 **Repositório GitHub (Público):** https://github.com/Humba-IFSC/musico-apoio-portal  
-**Portal Online (Cloudflare Pages / Static Assets — Acesso Público sem Senha):** https://musico-apoio-ifsc.hloliveira.workers.dev
+**Portal Online (Cloudflare Pages / Static Assets — Acesso Público sem Senha):** https://musico-apoio-ifsc-sje.hloliveira.workers.dev
 
 ---
 
@@ -36,6 +36,7 @@ Criados os 3 documentos táticos de planejamento e captação (mantidos fora do 
 - **Upgrade de `eventos-2027.html`:** inclusão do **Didascálico (Mostra de Arte e Cultura do IFSC — Novembro)** junto à 24ª SNCT/MCC 2027 como marcos de culminância e prestação de contas.
 - **Design System (`assets/css/style.css`):** adição do modificador `.pill--amber` para selos de captação e metas.
 - **Integridade validada (`v3.2`):** 13/13 páginas geradas via `scripts/build_site.py`, zero links quebrados, zero `autoplay`, zero strings partidárias/sigilosas/desatualizadas e crédito preservado em todas as páginas.
+- **Atualização de Domínio Provisório (22/11/2026 — 20h22):** URL pública do Cloudflare Workers renomeada de `musico-apoio-ifsc.hloliveira.workers.dev` para `https://musico-apoio-ifsc-sje.hloliveira.workers.dev` (com descontinuação do worker antigo para evitar duplicidade) e regeneração do `DOSSIE_EXECUTIVO_CAPTACAO_2027.pdf` com link e QR Code atualizados.
 
 ---
 
@@ -56,7 +57,7 @@ Criados os 3 documentos táticos de planejamento e captação (mantidos fora do 
 
 ## 📋 Próximos Passos Sugeridos (Backlog para Próximas Sessões)
 
-- [x] **Publicação Oficial (Deploy):** Repositório GitHub público criado (`https://github.com/Humba-IFSC/musico-apoio-portal`) e publicado no Cloudflare (`https://musico-apoio-ifsc.hloliveira.workers.dev`), 100% aberto e sem senha de acesso. ✅ CONCLUÍDO (21/11/2026)
+- [x] **Publicação Oficial (Deploy):** Repositório GitHub público criado (`https://github.com/Humba-IFSC/musico-apoio-portal`) e publicado no Cloudflare (`https://musico-apoio-ifsc-sje.hloliveira.workers.dev`), 100% aberto e sem senha de acesso. ✅ CONCLUÍDO (21/11/2026; URL renomeada em 22/11/2026)
 - [ ] **Galeria de Imagens Autorizadas:** Inserir fotos da Sala de Música, da Banda RAC & Roll e dos eventos (somente com TALE/autorização de imagem, respeitando LGPD/ECA).
 - [ ] **Downloads de PDFs Públicos:** Adicionar na página `apostilas.html` e `tecnologia-social.html` os links de download das apostilas finais e do *Manual de Implementação* assim que revisados para difusão pública.
 - [ ] **Expansão 2027:** Quando as novas iniciativas de 2027 deixarem de ser sigilosas, acionar o agente `maestro-web-musico-apoio` para criar as subpáginas dedicadas dentro do submenu **Projetos ▾** e atualizar a **Agenda 2027**.

@@ -22,7 +22,7 @@ Portal institucional **multipágina e expansível (v3.2)** concebido como **guar
 - `equipe.html`: **Equipe e Ética** — ficha técnica, 6 ODS da ONU, acessibilidade eMAG/WCAG/TEA e conformidade LGPD/ECA.
 
 ## Links Oficiais Publicados
-- **Portal Online (Cloudflare — Acesso Público sem Senha):** https://musico-apoio-ifsc.hloliveira.workers.dev
+- **Portal Online (Cloudflare — Acesso Público sem Senha):** https://musico-apoio-ifsc-sje.hloliveira.workers.dev
 - **Repositório GitHub (Público):** https://github.com/Humba-IFSC/musico-apoio-portal
 
 ## Como Atualizar e Publicar (Cloudflare CLI)
