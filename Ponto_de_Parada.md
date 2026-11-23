@@ -1,6 +1,6 @@
 # 📌 Ponto de Parada — Portal Programa Músico de Apoio & Sinfonia da Permanência
 
-**Última atualização válida:** 22/11/2026 (20h47)  
+**Última atualização válida:** 22/11/2026 (21h55)  
 **Versão atual do site:** `v3.2` (Arquitetura Multipágina Guarda-Chuva 13 páginas · Vitrine de Prospecção & Parcerias 2027 + Sala de Estratégia Interna em `musico-apoio/Prospectar/`)  
 **Desenvolvido por:** Prof. Humberto Luz Oliveira — IFSC Câmpus São José  
 **Diretório local do portal:** `musico-apoio/site-2027/`  
@@ -18,6 +18,11 @@ Para manter 100% do design gráfico (cores IFSC, tipografia Open Sans, acessibil
 - **Espelho Portável (para o GitHub do site):** `musico-apoio/site-2027/AGENTE_MAESTRO_WEB.md`
 - **Frase pronta para retomar em qualquer sessão futura:**
   > *"Zack, acione o agente **maestro-web-musico-apoio** e retome o **Ponto_de_Parada.md** do site Músico de Apoio."*
+
+### Skill Pedagógica Complementar (Série Semanal 2027)
+- **Nome da Skill:** `levadas-fraseados-semanal` (`.agents/skills/levadas-fraseados-semanal/SKILL.md`)
+- **Template de Roteiro:** `.agents/skills/levadas-fraseados-semanal/resources/template-roteiro-lfs.md` (com cópia editável local em `musico-apoio/Prospectar/TEMPLATE_ROTEIRO_LFS.md`)
+- **Finalidade:** planejar, roteirizar e catalogar os episódios de 10 a 15 minutos da série **"Levadas & Fraseados Semanal — Projeto Músico de Apoio (IFSC-SJE)"**, articulando kits multimídia (`MP4`/`MP3`/`PDF`), Abordagem Triangular, adaptações inclusivas (IVS/NAPNE) e o futuro *Livro de Coletâneas Multimídia*.
 
 ---
 
